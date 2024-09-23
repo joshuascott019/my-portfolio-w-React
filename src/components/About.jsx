@@ -14,7 +14,7 @@ const About = () => {
     <div className="flex flex-row justify-between m-auto w-3/4 text-xl">
       <div className="p-10 mx-5 w-1/2">
         <h1 className="text-4xl mb-10">About</h1>
-        <div className="flex flex-row">
+        <div className="flex flex-row text-blue-300">
           <p className="w-1/2 mr-3">
             Hello there,
             <br /> I'm Joshua, a currently aspiring Frontend Developer and

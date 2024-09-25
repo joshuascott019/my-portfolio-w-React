@@ -14,13 +14,13 @@ const About = () => {
     <div className="flex flex-row justify-between m-auto w-3/4 text-xl">
       <div className="p-10 mx-5 w-1/2">
         <h1 className="text-4xl mb-10">About</h1>
+        <p className="w-full my-5 text-blue-300">Hello there,</p>
         <div className="flex flex-row text-blue-300">
           <p className="w-1/2 mr-3">
-            Hello there,
-            <br /> I'm Joshua, a currently aspiring Frontend Developer and
-            eventually onto Fullstack. Despite the difficulty, I very much love
-            learning to code and program and make various creations from
-            interfaces, tools, and games.
+            I'm Joshua, a currently aspiring Frontend Developer and eventually
+            onto Fullstack. Despite the difficulty, I very much love learning to
+            code and program and make various creations from interfaces, tools,
+            and games.
           </p>
           <p className="w-1/2 ml-3">
             This portfolio is where I'll be adding my available projects ranging

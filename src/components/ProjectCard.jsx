@@ -18,30 +18,24 @@ const ProjectCard = ({ project }) => {
   const hasTailwind = techs.includes('Tailwind');
 
   return (
-    <div className="flex flex-col text-center w-60 h-72 bg-gray-100 rounded-2xl overflow-hidden border-blue-300 hover:border-x-8 hover:border-y-8 hover:shadow-2xl hover:shadow-blue-600">
+    <div className="flex flex-col justify-between text-center w-60 bg-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-600 hover:">
       <img
         className="object-cover h-3/4 border-b-4 border-blue-400"
         src={project.img}
         alt=""
       />
 
-      <h1 className="text-2xl text-black">{project.title}</h1>
+      <h1 className="text-xl text-black">{project.title}</h1>
 
-      <div className="flex justify-center gap-1 text-xl p-2 ">
-        {hasHTML ? (
-          <FaHtml5 className="text-orange-600 shadow-xl shadow-black" />
-        ) : null}
-        {hasCSS ? (
-          <FaCss3Alt className="text-blue-900 shadow-xl shadow-black" />
-        ) : null}
+      <div className="flex justify-center gap-1 text-4xl p-2 ">
+        {hasHTML ? <FaHtml5 className="text-orange-600 shadow-xl" /> : null}
+        {hasCSS ? <FaCss3Alt className="text-blue-900 shadow-xl" /> : null}
         {hasJavaScript ? (
-          <IoLogoJavascript className="text-yellow-400 shadow-xl shadow-black" />
+          <IoLogoJavascript className="text-yellow-400 shadow-xl" />
         ) : null}
-        {hasReact ? (
-          <FaReact className="text-cyan-400 shadow-xl shadow-black" />
-        ) : null}
+        {hasReact ? <FaReact className="text-cyan-400 shadow-xl" /> : null}
         {hasTailwind ? (
-          <RiTailwindCssFill className="text-teal-600 shadow-xl shadow-black" />
+          <RiTailwindCssFill className="text-teal-600 shadow-xl" />
         ) : null}
       </div>
     </div>

@@ -213,7 +213,7 @@
     "techs": ["HTML", "CSS", "JavaScript"],
     "projectLink": "",
     "repoLink": "",
-    "img": "/src/assets/images/project%20images/Incementing%20Counter.png"
+    "img": "/src/assets/images/project%20images/Incrementing%20Counter.png"
   },
   {
     "title": "Insect Catch Game",
@@ -341,7 +341,7 @@
     "techs": ["HTML", "CSS", "JavaScript"],
     "projectLink": "",
     "repoLink": "",
-    "img": "/src/assets/images/project%20images/Rotating%20Nav.png"
+    "img": "/src/assets/images/project%20images/Rotating%20Navigation.png"
   },
   {
     "title": "Scroll Animation",

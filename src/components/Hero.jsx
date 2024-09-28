@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="m-auto w-4/5 p-6 relative">
       <div className="absolute top-1/2 right-[-100px] text-[3.8rem] tracking-[--10px] leading-[1.8em] -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-8xl mb-2.5 tracking-normal">Portfolio</h1>
-        <h1 className="w-min text-blue-300 text-9xl font-bold tracking-tighter">
+        <h1 className=" font-Montserrat w-min text-blue-300 text-9xl font-bold tracking-tighter">
           JOSHUA SCOTT
         </h1>
       </div>

@@ -9,8 +9,10 @@ const Footer = () => {
         <FaGithub />
         <FaFreeCodeCamp />
       </div>
-      <p className="mx-auto my-3">Developed by: Joshua Scott</p>
-      <p className="mx-auto my-3">Designed by: Monica Marçal & Joshua Scott</p>
+      <p className="font-Montserrat mx-auto my-3">Developed by: Joshua Scott</p>
+      <p className="font-Montserrat mx-auto my-3">
+        Designed by: Monica Marçal & Joshua Scott
+      </p>
     </div>
   );
 };

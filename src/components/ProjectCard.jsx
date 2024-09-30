@@ -25,9 +25,13 @@ const ProjectCard = ({ project }) => {
       : 'relative flex flex-col justify-between border-transparent border-8 text-center w-60 bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-600 hover:border-blue-600 transition-all duration-300 transform hover:scale-110';
 
   return (
-    <Link to={projectLink} target="_blank" className={cardStyle}>
+    <Link
+      to={projectLink == '' ? 'javascript:void(0)' : projectLink}
+      target={projectLink == '' ? '' : '_blank'}
+      className={cardStyle}
+    >
       {projectLink == '' ? (
-        <div className="absolute w-full h-full bg-black bg-opacity-50"></div>
+        <div className="absolute w-full h-full bg-black bg-opacity-50 hover:bg-red-600 hover:bg-opacity-50 hover:z-20"></div>
       ) : null}
 
       <img className="object-cover h-3/4" src={project.img} alt="" />

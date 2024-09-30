@@ -11,7 +11,7 @@ import { RiTailwindCssFill } from 'react-icons/ri';
 
 const About = () => {
   return (
-    <div className="flex flex-row justify-between m-auto w-3/4 text-xl">
+    <div className="flex flex-row justify-between mx-auto my-16 w-4/5 text-xl p-12">
       <div className="p-10 mx-5 w-1/2">
         <h1 className="font-Montserrat text-4xl mb-10">About</h1>
         <p className="w-full my-5 text-blue-300">Hello there,</p>

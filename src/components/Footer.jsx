@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="bg-blue-600 flex flex-col p-12">
-      <div className="mx-auto my-6 text-white text-7xl flex space-x-20">
+    <div className="bg-blue-600 flex flex-col p-3 md:p-9 xl:p-24">
+      <div className="m-auto text-white flex text-4xl mb-3 space-x-12 md:text-6xl md:mb-6 xl:text-7xl xl:mb-12 xl:space-x-24">
         <Link
           to="https://www.linkedin.com/in/joshua-scott-295a3b265/"
           target="_blank"
@@ -19,8 +19,10 @@ const Footer = () => {
           <FaFreeCodeCamp />
         </Link>
       </div>
-      <p className="font-Montserrat mx-auto my-6">Developed by: Joshua Scott</p>
-      <p className="font-Montserrat mx-auto my-6">
+      <p className="font-Montserrat m-auto text-sm my-1 md:text-lg md:my-3">
+        Developed by: Joshua Scott
+      </p>
+      <p className="font-Montserrat m-auto text-sm my-1 md:text-lg md:my-3">
         Designed by: Monica Marçal & Joshua Scott
       </p>
     </div>

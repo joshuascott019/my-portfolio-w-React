@@ -5,8 +5,8 @@ import About from '../components/About';
 const HomePage = () => {
   return (
     <>
-      <Hero />
-      <About />
+      {/* <Hero />
+      <About /> */}
     </>
   );
 };

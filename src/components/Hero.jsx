@@ -3,12 +3,12 @@ import HeroImage from '../assets/images/HeroBanner.png';
 
 const Hero = () => {
   return (
-    <div className="m-auto w-4/5 relative">
-      <div className="absolute top-1/2 left-3/4 md:left-3/4 transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-4xl xl:text-8xl mb-2.5 tracking-normal">
+    <div className="mx-auto my-10 w-4/5 relative">
+      <div className="absolute top-1/2 left-3/4 transform -translate-x-3/4 md:-translate-x-1/2 -translate-y-1/2 ">
+        <h1 className="text-4xl md:text-6xl xl:text-8xl mb-2.5 tracking-normal">
           Portfolio
         </h1>
-        <h1 className=" font-Montserrat w-min text-blue-300 text-5xl xl:text-9xl font-bold tracking-tighter">
+        <h1 className=" font-Montserrat w-min text-blue-300 text-5xl md:text-7xl xl:text-9xl font-bold tracking-tighter">
           JOSHUA SCOTT
         </h1>
       </div>

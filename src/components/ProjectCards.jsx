@@ -40,7 +40,7 @@ const ProjectCards = () => {
 
   return (
     <>
-      <div className="mt-10 mx-auto w-4/5 flex flex-row-reverse px-20 py-10">
+      <div className="mt-10 mx-auto w-11/12 xl:w-4/5 flex justify-center sm:justify-normal sm:flex-row-reverse px-20 py-10">
         <div>
           <label htmlFor="sort">Sort by: </label>
           <select

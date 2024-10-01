@@ -21,8 +21,8 @@ const ProjectCard = ({ project }) => {
 
   const cardStyle =
     projectLink === ''
-      ? 'relative flex flex-col justify-between border-black border-opacity-50 border-8 text-center w-60 bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-red-600 hover:border-red-600 transition-all duration-300 hover:animate-shake'
-      : 'relative flex flex-col justify-between border-transparent border-8 text-center w-60 bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-600 hover:border-blue-600 transition-all duration-300 transform hover:scale-110';
+      ? 'relative flex flex-col justify-between border-black border-opacity-50 border-8 text-center w-52 lg:w-60 bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-red-600 hover:border-red-600 transition-all duration-300 hover:animate-shake'
+      : 'relative flex flex-col justify-between border-transparent border-8 text-center w-52 lg:w-60 bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-600 hover:border-blue-600 transition-all duration-300 transform hover:scale-110';
 
   return (
     <Link

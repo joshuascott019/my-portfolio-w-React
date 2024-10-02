@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
       <h1 className="font-Montserrat text-xl tracking-tight text-black">
         {project.title}
       </h1>
-      <p className="text-black text-xs">{project.type}</p>
+      <p className="text-black text-xs">{project.category}</p>
       {projectLink == '' ? (
         <p className="text-xs text-red-700 font-bold z-10">
           ***NO LINK DETECTED!***

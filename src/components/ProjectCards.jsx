@@ -5,8 +5,30 @@ import initProjects from '../projects.json';
 const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}');
 
 const ProjectCards = () => {
-  const [projects, setProjects] = useState(initProjects);
-  const [sortOption, setSortOption] = useState('name-asc');
+  // Function to sort projects based on the sort option
+  const sortProjects = (projects, option) => {
+    switch (option) {
+      case 'date-asc':
+        return [...projects].sort(
+          (a, b) => new Date(a.date) - new Date(b.date)
+        );
+      case 'date-desc':
+        return [...projects].sort(
+          (a, b) => new Date(b.date) - new Date(a.date)
+        );
+      case 'name-asc':
+        return [...projects].sort((a, b) => a.title.localeCompare(b.title));
+      case 'name-desc':
+        return [...projects].sort((a, b) => b.title.localeCompare(a.title));
+      default:
+        return projects;
+    }
+  };
+
+  const [sortOption, setSortOption] = useState('date-desc');
+  const [projects, setProjects] = useState(
+    sortProjects(initProjects, sortOption)
+  );
   const [loadedProjects, setLoadedProjects] = useState([]);
 
   useEffect(() => {
@@ -30,32 +52,8 @@ const ProjectCards = () => {
   const handleSortChange = (e) => {
     const option = e.target.value;
     setSortOption(option);
-    let sortedData;
-    switch (option) {
-      case 'date-asc':
-        sortedData = [...projects].sort(
-          (a, b) => new Date(a.date) - new Date(b.date)
-        );
-        break;
-      case 'date-desc':
-        sortedData = [...projects].sort(
-          (a, b) => new Date(b.date) - new Date(a.date)
-        );
-        break;
-      case 'name-asc':
-        sortedData = [...projects].sort((a, b) =>
-          a.title.localeCompare(b.title)
-        );
-        break;
-      case 'name-desc':
-        sortedData = [...projects].sort((a, b) =>
-          b.title.localeCompare(a.title)
-        );
-        break;
-      default:
-        sortedData = projects;
-    }
-    setProjects(sortedData);
+    const sortedData = sortProjects(projects, option); // Sort projects based on the new option
+    setProjects(sortedData); // Update projects with sorted data
   };
 
   return (

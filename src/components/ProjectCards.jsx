@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import initProjects from '../projects.json';
 
-// Dynamically import all images from the images folder
 const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}');
 
 const ProjectCards = () => {
@@ -17,9 +16,9 @@ const ProjectCards = () => {
           const imageKey = `../assets/images/${project.image}`;
           if (images[imageKey]) {
             const imgModule = await images[imageKey]();
-            return { ...project, image: imgModule.default }; // Image is the default export
+            return { ...project, image: imgModule.default };
           }
-          return { ...project, image: '' }; // In case the image doesn't exist
+          return { ...project, image: '' };
         })
       );
       setLoadedProjects(updatedProjects);

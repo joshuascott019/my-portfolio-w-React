@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import initProjects from '../projects.json';
-import { useState } from 'react';
+
+// Dynamically import all images from the images folder
+const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}');
 
 const ProjectCards = () => {
   const [projects, setProjects] = useState(initProjects);
   const [sortOption, setSortOption] = useState('name-asc');
+  const [loadedProjects, setLoadedProjects] = useState([]);
+
+  useEffect(() => {
+    const loadImages = async () => {
+      const updatedProjects = await Promise.all(
+        projects.map(async (project) => {
+          const imageKey = `../assets/images/${project.image}`;
+          if (images[imageKey]) {
+            const imgModule = await images[imageKey]();
+            return { ...project, image: imgModule.default }; // Image is the default export
+          }
+          return { ...project, image: '' }; // In case the image doesn't exist
+        })
+      );
+      setLoadedProjects(updatedProjects);
+    };
+
+    loadImages();
+  }, [projects]);
 
   const handleSortChange = (e) => {
     const option = e.target.value;
@@ -57,7 +78,7 @@ const ProjectCards = () => {
         </div>
       </div>
       <div className=" mb-24 mx-auto w-4/5 flex gap-12 flex-wrap justify-center">
-        {projects.map((project, index) => (
+        {loadedProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>

@@ -58,14 +58,14 @@ const ProjectCard = ({ project }) => {
         {hasHTML && (
           <FaHtml5 className="text-orange-600 border-black bg-transparent" />
         )}
-        {hasCSS && (
-          <FaCss3Alt className="text-blue-900 border-black bg-transparent" />
-        )}
         {hasJavaScript && (
           <IoLogoJavascript className="text-yellow-400 border-black bg-transparent" />
         )}
         {hasReact && (
           <FaReact className="text-cyan-400 border-black bg-transparent" />
+        )}
+        {hasCSS && (
+          <FaCss3Alt className="text-blue-900 border-black bg-transparent" />
         )}
         {hasTailwind && (
           <RiTailwindCssFill className="text-teal-600 bg-transparent" />

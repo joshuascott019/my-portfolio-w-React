@@ -5,7 +5,6 @@ import initProjects from '../projects.json';
 const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}');
 
 const ProjectCards = () => {
-  // Function to sort projects based on the sort option
   const sortProjects = (projects, option) => {
     switch (option) {
       case 'date-asc':
@@ -52,8 +51,8 @@ const ProjectCards = () => {
   const handleSortChange = (e) => {
     const option = e.target.value;
     setSortOption(option);
-    const sortedData = sortProjects(projects, option); // Sort projects based on the new option
-    setProjects(sortedData); // Update projects with sorted data
+    const sortedData = sortProjects(projects, option);
+    setProjects(sortedData);
   };
 
   return (

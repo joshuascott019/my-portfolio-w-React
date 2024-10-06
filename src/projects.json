@@ -1,5 +1,14 @@
 [
   {
+    "title": "Project Management App",
+    "date": "2024-05-18",
+    "techs": ["React", "Tailwind"],
+    "category": "App",
+    "projectLink": "https://joshsprojectmanagementapp.netlify.app/",
+    "repoLink": "https://github.com/joshuascott019/course-project_react-project-management-app",
+    "image": "ProjectManagementApp.png"
+  },
+  {
     "title": "3D Background Blocks",
     "date": "2023-12-08",
     "techs": ["HTML", "CSS", "JavaScript"],

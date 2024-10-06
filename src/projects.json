@@ -1,5 +1,50 @@
 [
   {
+    "title": "Old Portfolio",
+    "date": "2024-02-25",
+    "techs": ["HTML", "CSS", "JavaScript"],
+    "category": "Website",
+    "projectLink": "https://joshuascott019.github.io/my-portfolio/#",
+    "repoLink": "https://github.com/joshuascott019/my-portfolio",
+    "image": "OldPortfolio.png"
+  },
+  {
+    "title": "Investment Calculator",
+    "date": "2024-03-01",
+    "techs": ["React", "CSS"],
+    "category": "App",
+    "projectLink": "https://joshsinvestmentcalculator.netlify.app/",
+    "repoLink": "https://github.com/joshuascott019/course-project_react-investment-calculator",
+    "image": "InvestmentCalculator.png"
+  },
+  {
+    "title": "Shopping Cart",
+    "date": "2024-05-24",
+    "techs": ["React", "CSS"],
+    "category": "App",
+    "projectLink": "https://joshsshoppingcart.netlify.app/",
+    "repoLink": "https://github.com/joshuascott019/course-project_react-shopping-cart",
+    "image": "ShoppingCart.png"
+  },
+  {
+    "title": "Countdown Game",
+    "date": "2024-05-16",
+    "techs": ["React", "CSS"],
+    "category": "Game",
+    "projectLink": "https://joshscountdowngame.netlify.app/",
+    "repoLink": "https://github.com/joshuascott019/course-project_react-refs-and-portals",
+    "image": "CountdownGame.png"
+  },
+  {
+    "title": "React Quiz App",
+    "date": "2024-06-07",
+    "techs": ["React", "CSS"],
+    "category": "App",
+    "projectLink": "https://joshsquizapp.netlify.app/",
+    "repoLink": "https://github.com/joshuascott019/course-project_react-quiz-app",
+    "image": "QuizApp.png"
+  },
+  {
     "title": "Project Management App",
     "date": "2024-05-18",
     "techs": ["React", "Tailwind"],
@@ -273,7 +318,7 @@
     "title": "Landing Page",
     "date": "2023-06-14",
     "techs": ["HTML", "CSS"],
-    "category": "Static Site",
+    "category": "Static Page",
     "projectLink": "https://joshuascott019.github.io/my-portfolio/projects/Landing%20Page/index.html",
     "repoLink": "https://github.com/joshuascott019/my-portfolio/tree/main/projects/Landing%20Page",
     "image": "Landing.png"
@@ -453,7 +498,7 @@
     "title": "Survey Form",
     "date": "2023-06-11",
     "techs": ["HTML", "CSS"],
-    "category": "Static Site",
+    "category": "Static Page",
     "projectLink": "https://joshuascott019.github.io/my-portfolio/projects/Survey%20Form/index.html",
     "repoLink": "https://github.com/joshuascott019/my-portfolio/tree/main/projects/Survey%20Form",
     "image": "Survey.png"
@@ -498,7 +543,7 @@
     "title": "Tribute Page",
     "date": "2023-06-12",
     "techs": ["HTML", "CSS"],
-    "category": "Static Site",
+    "category": "Static Page",
     "projectLink": "https://joshuascott019.github.io/my-portfolio/projects/Tribute%20Page/index.html",
     "repoLink": "https://github.com/joshuascott019/my-portfolio/tree/main/projects/Tribute%20Page",
     "image": "Tribute.png"
@@ -516,7 +561,7 @@
     "title": "VitóriaSoft Website",
     "date": "2024-04-05",
     "techs": ["HTML", "CSS", "JavaScript"],
-    "category": "Commission",
+    "category": "Website",
     "projectLink": "https://joshuascott019.github.io/VSdB-site/",
     "repoLink": "https://github.com/joshuascott019/my-portfolio/tree/main/projects/50%20Projects%20in%2050%20Days/Verify%20Account%20UI",
     "image": "VitóriaSoft.png"

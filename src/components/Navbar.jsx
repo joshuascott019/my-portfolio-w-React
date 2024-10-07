@@ -20,9 +20,6 @@ const Navbar = () => {
           <NavLink to="/portfolio" className={linkClass}>
             Portfolio
           </NavLink>
-          {/* <NavLink to="/" className={linkClass}>
-            Contact
-          </NavLink> */}
         </div>
       </div>
     </div>

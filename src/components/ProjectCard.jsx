@@ -34,7 +34,6 @@ const ProjectCard = ({ project }) => {
         <div className="absolute w-full h-full bg-black bg-opacity-50 hover:bg-red-600 hover:bg-opacity-50 hover:z-20"></div>
       ) : null}
 
-      {/* Add the image rendering here */}
       {project.image && (
         <img
           className="object-cover h-40 w-full"

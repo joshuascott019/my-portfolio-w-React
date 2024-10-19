@@ -51,7 +51,6 @@ const ProjectCards = () => {
     loadImages(sortedProjects);
   }, [sortOption]);
 
-  // Handle setting each project to "loaded" when its image is fully loaded
   const handleImageLoad = (index) => {
     setLoadedProjects((prevProjects) =>
       prevProjects.map((proj, i) =>
@@ -82,7 +81,8 @@ const ProjectCards = () => {
           </select>
         </div>
       </div>
-      <div className="mb-24 mx-auto w-4/5 flex gap-12 flex-wrap justify-center">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-24 mx-auto w-11/12 xl:w-4/5 min-h-screen">
         {loadedProjects.map((project, index) => (
           <div
             key={index}

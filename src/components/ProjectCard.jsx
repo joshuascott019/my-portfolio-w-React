@@ -16,8 +16,8 @@ const ProjectCard = ({ project, onImageLoad }) => {
   const { techs, projectLink, image, title, category } = project;
   const cardStyle =
     projectLink === ''
-      ? 'relative flex flex-col justify-between border-black border-opacity-50 border-8 text-center w-52 lg:w-60 bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-red-600 hover:border-red-600 transition-all duration-300 hover:animate-shake'
-      : 'relative flex flex-col justify-between border-transparent border-8 text-center w-52 lg:w-60 bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-600 hover:border-blue-600 transition-all duration-300 transform hover:scale-110';
+      ? 'relative flex flex-col justify-between border-black border-opacity-50 border-8 text-center bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-red-600 hover:border-red-600 transition-all duration-300 hover:animate-shake'
+      : 'relative flex flex-col justify-between border-transparent border-8 text-center bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-600 hover:border-blue-600 transition-all duration-300 transform hover:scale-110';
 
   return (
     <Link
@@ -32,25 +32,27 @@ const ProjectCard = ({ project, onImageLoad }) => {
 
       {image && (
         <img
-          className="object-cover h-40 w-full"
+          className="object-cover w-full h-48" // Ensuring all images have the same height and width
           src={image}
           alt={title}
-          onLoad={onImageLoad} // Trigger the onLoad callback
+          onLoad={onImageLoad} // Trigger onLoad callback
         />
       )}
 
-      <h1 className="font-Montserrat text-xl tracking-tight text-black">
+      <h1 className="font-Montserrat text-lg sm:text-xl tracking-tight text-black p-2">
         {title}
       </h1>
-      <p className="text-black text-xs">{category}</p>
+      <p className="text-black text-xs sm:text-sm">{category}</p>
       {projectLink === '' && (
         <p className="text-xs text-red-700 font-bold z-10">
           ***NO LINK DETECTED!***
         </p>
       )}
 
-      <div className="flex justify-center gap-1 text-4xl p-2">
-        {techs.map((tech) => techIcons[tech])}
+      <div className="flex justify-center gap-1 text-3xl sm:text-4xl p-2">
+        {techs.map((tech) => (
+          <span key={tech}>{techIcons[tech]}</span>
+        ))}
       </div>
     </Link>
   );

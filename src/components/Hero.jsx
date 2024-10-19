@@ -64,7 +64,7 @@ const Hero = () => {
         </h1>
 
         <a
-          href="#portfolio"
+          href="/portfolio"
           className={`mt-8 px-6 py-3 bg-blue-600 text-white text-xl md:text-2xl rounded-full hover:bg-blue-500 transition-all duration-300 transform ${
             isCtaVisible
               ? 'opacity-100 translate-y-0'

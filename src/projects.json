@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "title": "Old Portfolio",
     "date": "2024-02-25",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -9,6 +10,7 @@
     "image": "OldPortfolio.png"
   },
   {
+    "id": "2",
     "title": "Investment Calculator",
     "date": "2024-03-01",
     "techs": ["React", "CSS"],
@@ -18,6 +20,7 @@
     "image": "InvestmentCalculator.png"
   },
   {
+    "id": "3",
     "title": "Shopping Cart",
     "date": "2024-05-24",
     "techs": ["React", "CSS"],
@@ -27,6 +30,7 @@
     "image": "ShoppingCart.png"
   },
   {
+    "id": "4",
     "title": "Countdown Game",
     "date": "2024-05-16",
     "techs": ["React", "CSS"],
@@ -36,6 +40,7 @@
     "image": "CountdownGame.png"
   },
   {
+    "id": "5",
     "title": "React Quiz App",
     "date": "2024-06-07",
     "techs": ["React", "CSS"],
@@ -45,6 +50,7 @@
     "image": "QuizApp.png"
   },
   {
+    "id": "6",
     "title": "Project Management App",
     "date": "2024-05-18",
     "techs": ["React", "Tailwind"],
@@ -54,6 +60,7 @@
     "image": "ProjectManagementApp.png"
   },
   {
+    "id": "7",
     "title": "3D Background Blocks",
     "date": "2023-12-08",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -63,6 +70,7 @@
     "image": "3D Background Blocks.png"
   },
   {
+    "id": "8",
     "title": "Animated Countdown",
     "date": "2023-12-06",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -72,6 +80,7 @@
     "image": "Animated Countdown.png"
   },
   {
+    "id": "9",
     "title": "Animated Navigation",
     "date": "2023-11-25",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -81,6 +90,7 @@
     "image": "Animated Navigation.png"
   },
   {
+    "id": "10",
     "title": "Auto Text Effect",
     "date": "2023-12-05",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -90,6 +100,7 @@
     "image": "Auto Text Effect.png"
   },
   {
+    "id": "11",
     "title": "Background Slider",
     "date": "2023-11-29",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -99,6 +110,7 @@
     "image": "Background Slider.png"
   },
   {
+    "id": "12",
     "title": "Blurry Loading",
     "date": "2023-11-21",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -108,6 +120,7 @@
     "image": "Blurry Loading.png"
   },
   {
+    "id": "13",
     "title": "Button Ripple Effect",
     "date": "2023-11-30",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -117,6 +130,7 @@
     "image": "Button Ripple Effect.png"
   },
   {
+    "id": "14",
     "title": "Content Placeholder",
     "date": "2023-11-30",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -126,6 +140,7 @@
     "image": "Content Placeholder.png"
   },
   {
+    "id": "15",
     "title": "Custom Range Slider",
     "date": "2023-12-11",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -135,6 +150,7 @@
     "image": "Custom Range Slider.png"
   },
   {
+    "id": "16",
     "title": "Dad Joke Generator",
     "date": "2023-11-24",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -144,6 +160,7 @@
     "image": "Dad Joke Generator.png"
   },
   {
+    "id": "17",
     "title": "Documentation Page",
     "date": "2023-06-13",
     "techs": ["HTML", "CSS"],
@@ -153,6 +170,7 @@
     "image": "Documentation.png"
   },
   {
+    "id": "18",
     "title": "Double-Click Heart",
     "date": "2023-12-05",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -162,6 +180,7 @@
     "image": "Double Click Heart.png"
   },
   {
+    "id": "19",
     "title": "Double Vertical Slider",
     "date": "2023-12-01",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -171,6 +190,7 @@
     "image": "Double Vertical Slider.png"
   },
   {
+    "id": "20",
     "title": "Drag N Drop",
     "date": "2023-11-30",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -180,6 +200,7 @@
     "image": "Drag N Drop.png"
   },
   {
+    "id": "21",
     "title": "Drawing App",
     "date": "2023-11-30",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -189,6 +210,7 @@
     "image": "Drawing App.png"
   },
   {
+    "id": "22",
     "title": "Drink Water App",
     "date": "2023-11-27",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -198,6 +220,7 @@
     "image": "Drink Water.png"
   },
   {
+    "id": "23",
     "title": "Event KeyCodes",
     "date": "2023-11-24",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -207,6 +230,7 @@
     "image": "Event KeyCodes.png"
   },
   {
+    "id": "24",
     "title": "Expanding Cards",
     "date": "2023-11-20",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -216,6 +240,7 @@
     "image": "Expanding Cards.png"
   },
   {
+    "id": "25",
     "title": "FAQ Collapse",
     "date": "2023-11-24",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -225,6 +250,7 @@
     "image": "FAQ Collapse.png"
   },
   {
+    "id": "26",
     "title": "Feedback UI Design",
     "date": "2023-12-08",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -234,6 +260,7 @@
     "image": "Feedback UI Design.png"
   },
   {
+    "id": "27",
     "title": "Form Wave Animation",
     "date": "2023-11-22",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -243,6 +270,7 @@
     "image": "Form Wave Animation.png"
   },
   {
+    "id": "28",
     "title": "Github Profiles Search",
     "date": "2023-12-04",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -252,6 +280,7 @@
     "image": "Github Profiles.png"
   },
   {
+    "id": "29",
     "title": "Good, Cheap, Fast Checkboxes",
     "date": "2023-12-05",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -261,6 +290,7 @@
     "image": "Good, Cheap, Fast Checkboxes.png"
   },
   {
+    "id": "30",
     "title": "Hidden Search",
     "date": "2023-11-21",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -270,6 +300,7 @@
     "image": "Hidden Search.png"
   },
   {
+    "id": "31",
     "title": "Hoverboard",
     "date": "2023-12-07",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -279,6 +310,7 @@
     "image": "Hoverboard.png"
   },
   {
+    "id": "32",
     "title": "Image Carousel",
     "date": "2023-12-06",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -288,6 +320,7 @@
     "image": "Image Carousel.png"
   },
   {
+    "id": "33",
     "title": "Incrementing Counter",
     "date": "2023-11-27",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -297,6 +330,7 @@
     "image": "Incrementing Counter.png"
   },
   {
+    "id": "34",
     "title": "Insect Catch Game",
     "date": "2023-12-17",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -306,6 +340,7 @@
     "image": "Insect Catch Game.png"
   },
   {
+    "id": "35",
     "title": "Kinetic CSS Loader",
     "date": "2023-11-30",
     "techs": ["HTML", "CSS"],
@@ -315,6 +350,7 @@
     "image": "Kinetic CSS Loader.png"
   },
   {
+    "id": "36",
     "title": "Landing Page",
     "date": "2023-06-14",
     "techs": ["HTML", "CSS"],
@@ -324,6 +360,7 @@
     "image": "Landing.png"
   },
   {
+    "id": "37",
     "title": "Live User Filter",
     "date": "2023-12-08",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -333,6 +370,7 @@
     "image": "Live User Filter.png"
   },
   {
+    "id": "38",
     "title": "Mobile Tab Navigation",
     "date": "2023-12-07",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -342,6 +380,7 @@
     "image": "Mobile Tab Navigation.png"
   },
   {
+    "id": "39",
     "title": "Movie App",
     "date": "2023-11-27",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -351,6 +390,7 @@
     "image": "Movie App.png"
   },
   {
+    "id": "40",
     "title": "Netflix Nav Effect",
     "date": "2023-12-11",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -360,6 +400,7 @@
     "image": "Netflix Nav Effect.png"
   },
   {
+    "id": "41",
     "title": "Note App",
     "date": "2023-12-06",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -369,6 +410,7 @@
     "image": "Note App.png"
   },
   {
+    "id": "42",
     "title": "Password Generator",
     "date": "2023-12-05",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -378,6 +420,7 @@
     "image": "Password Generator.png"
   },
   {
+    "id": "43",
     "title": "Password Strength Background",
     "date": "2023-12-08",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -387,6 +430,7 @@
     "image": "Password Strength Background.png"
   },
   {
+    "id": "44",
     "title": "Pokedex",
     "date": "2023-12-07",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -396,6 +440,7 @@
     "image": "Pokedex.png"
   },
   {
+    "id": "45",
     "title": "Progress Steps",
     "date": "2023-11-20",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -405,6 +450,7 @@
     "image": "Progress Steps.png"
   },
   {
+    "id": "46",
     "title": "Quiz App",
     "date": "2023-12-11",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -414,6 +460,7 @@
     "image": "Quiz App.png"
   },
   {
+    "id": "47",
     "title": "Random Choice Picker",
     "date": "2023-11-25",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -423,6 +470,7 @@
     "image": "Random Choice Picker.png"
   },
   {
+    "id": "48",
     "title": "Random Image Feed",
     "date": "2023-12-11",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -432,6 +480,7 @@
     "image": "Random Image Feed.png"
   },
   {
+    "id": "49",
     "title": "Rotating Nav",
     "date": "2023-11-21",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -441,6 +490,7 @@
     "image": "Rotating Navigation.png"
   },
   {
+    "id": "50",
     "title": "Scroll Animation",
     "date": "2023-11-22",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -450,6 +500,7 @@
     "image": "Scroll Animation.png"
   },
   {
+    "id": "51",
     "title": "Shopping List App",
     "date": "2023-11-05",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -459,6 +510,7 @@
     "image": "ShoppingList.png"
   },
   {
+    "id": "52",
     "title": "Simple Calculator",
     "date": "2023-11-08",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -468,6 +520,7 @@
     "image": "SimpleCalculator.png"
   },
   {
+    "id": "53",
     "title": "Sound Board",
     "date": "2023-11-22",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -477,6 +530,7 @@
     "image": "Sound Board.png"
   },
   {
+    "id": "54",
     "title": "Split Landing Page",
     "date": "2023-11-22",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -486,6 +540,7 @@
     "image": "Split Landing Page.png"
   },
   {
+    "id": "55",
     "title": "Sticky Navbar",
     "date": "2023-11-30",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -495,6 +550,7 @@
     "image": "Sticky Navbar.png"
   },
   {
+    "id": "56",
     "title": "Survey Form",
     "date": "2023-06-11",
     "techs": ["HTML", "CSS"],
@@ -504,6 +560,7 @@
     "image": "Survey.png"
   },
   {
+    "id": "57",
     "title": "Testimonial Box Switcher",
     "date": "2023-12-11",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -513,6 +570,7 @@
     "image": "Testimonial Box Switcher.png"
   },
   {
+    "id": "58",
     "title": "Theme Clock",
     "date": "2023-11-29",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -522,6 +580,7 @@
     "image": "Theme Clock.png"
   },
   {
+    "id": "59",
     "title": "Toast Notification",
     "date": "2023-12-01",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -531,6 +590,7 @@
     "image": "Toast Notification.png"
   },
   {
+    "id": "60",
     "title": "Todo List",
     "date": "2023-12-11",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -540,6 +600,7 @@
     "image": "Todo List.png"
   },
   {
+    "id": "61",
     "title": "Tribute Page",
     "date": "2023-06-12",
     "techs": ["HTML", "CSS"],
@@ -549,6 +610,7 @@
     "image": "Tribute.png"
   },
   {
+    "id": "62",
     "title": "Verify Account UI",
     "date": "2023-12-08",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -558,6 +620,7 @@
     "image": "Verify Account UI.png"
   },
   {
+    "id": "63",
     "title": "VitóriaSoft Website",
     "date": "2024-04-05",
     "techs": ["HTML", "CSS", "JavaScript"],
@@ -567,6 +630,7 @@
     "image": "VitóriaSoft.png"
   },
   {
+    "id": "64",
     "title": "Tic-Tac-Toe Game",
     "date": "2024-03-03",
     "techs": ["React", "CSS"],

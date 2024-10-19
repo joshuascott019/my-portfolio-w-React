@@ -44,32 +44,32 @@ const Hero = () => {
 
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
         <h1
-          className={`text-4xl md:text-6xl xl:text-8xl mb-2.5 tracking-wide transition-opacity duration-1000 ease-in-out ${
+          className={`text-4xl md:text-6xl xl:text-8xl mb-2.5 tracking-wide transition-all duration-1000 ease-in-out transform ${
             isPortfolioVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
-          } transform transition-transform`}
+          }`}
         >
           Portfolio
         </h1>
 
         <h1
-          className={`font-Montserrat text-blue-300 text-5xl md:text-7xl xl:text-9xl font-bold tracking-tighter drop-shadow-lg transition-opacity duration-1000 ease-in-out ${
+          className={`font-Montserrat text-blue-300 text-5xl md:text-7xl xl:text-9xl font-bold tracking-tighter drop-shadow-lg transition-all duration-1000 ease-in-out transform ${
             isNameVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
-          } transform transition-transform`}
+          }`}
         >
           JOSHUA SCOTT
         </h1>
 
         <a
           href="#portfolio"
-          className={`mt-8 px-6 py-3 bg-blue-600 text-white text-xl md:text-2xl rounded-full hover:bg-blue-500 transition-all duration-300 transition-opacity ease-in-out ${
+          className={`mt-8 px-6 py-3 bg-blue-600 text-white text-xl md:text-2xl rounded-full hover:bg-blue-500 transition-all duration-300 transform ${
             isCtaVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
-          } transform transition-transform`}
+          }`}
         >
           View My Work
         </a>

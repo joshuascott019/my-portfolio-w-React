@@ -25,15 +25,13 @@ const ProjectCards = () => {
   };
 
   const [sortOption, setSortOption] = useState('date-desc');
-  const [projects, setProjects] = useState(
-    sortProjects(initProjects, sortOption)
-  );
+  const [projects, setProjects] = useState(initProjects);
   const [loadedProjects, setLoadedProjects] = useState([]);
 
   useEffect(() => {
-    const loadImages = async () => {
+    const loadImages = async (sortedProjects) => {
       const updatedProjects = await Promise.all(
-        projects.map(async (project) => {
+        sortedProjects.map(async (project) => {
           const imageKey = `../assets/images/${project.image}`;
           if (images[imageKey]) {
             const imgModule = await images[imageKey]();
@@ -45,14 +43,12 @@ const ProjectCards = () => {
       setLoadedProjects(updatedProjects);
     };
 
-    loadImages();
-  }, [projects]);
+    const sortedProjects = sortProjects(initProjects, sortOption);
+    loadImages(sortedProjects);
+  }, [sortOption]);
 
   const handleSortChange = (e) => {
-    const option = e.target.value;
-    setSortOption(option);
-    const sortedData = sortProjects(projects, option);
-    setProjects(sortedData);
+    setSortOption(e.target.value);
   };
 
   return (
@@ -73,7 +69,7 @@ const ProjectCards = () => {
           </select>
         </div>
       </div>
-      <div className=" mb-24 mx-auto w-4/5 flex gap-12 flex-wrap justify-center">
+      <div className="mb-24 mx-auto w-4/5 flex gap-12 flex-wrap justify-center">
         {loadedProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

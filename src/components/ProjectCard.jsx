@@ -12,7 +12,7 @@ const techIcons = {
   Tailwind: <RiTailwindCssFill className="text-teal-600" />,
 };
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onImageLoad }) => {
   const { techs, projectLink, image, title, category } = project;
   const cardStyle =
     projectLink === ''
@@ -31,7 +31,12 @@ const ProjectCard = ({ project }) => {
       )}
 
       {image && (
-        <img className="object-cover h-40 w-full" src={image} alt={title} />
+        <img
+          className="object-cover h-40 w-full"
+          src={image}
+          alt={title}
+          onLoad={onImageLoad} // Trigger the onLoad callback
+        />
       )}
 
       <h1 className="font-Montserrat text-xl tracking-tight text-black">

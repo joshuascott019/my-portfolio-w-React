@@ -33,11 +33,15 @@ const ProjectCards = () => {
       const updatedProjects = await Promise.all(
         sortedProjects.map(async (project) => {
           const imageKey = `../assets/images/${project.image}`;
+          let imgModule;
           if (images[imageKey]) {
-            const imgModule = await images[imageKey]();
-            return { ...project, image: imgModule.default };
+            imgModule = await images[imageKey]();
           }
-          return { ...project, image: '' };
+          return {
+            ...project,
+            image: imgModule ? imgModule.default : '',
+            loaded: false,
+          };
         })
       );
       setLoadedProjects(updatedProjects);
@@ -46,6 +50,15 @@ const ProjectCards = () => {
     const sortedProjects = sortProjects(initProjects, sortOption);
     loadImages(sortedProjects);
   }, [sortOption]);
+
+  // Handle setting each project to "loaded" when its image is fully loaded
+  const handleImageLoad = (index) => {
+    setLoadedProjects((prevProjects) =>
+      prevProjects.map((proj, i) =>
+        i === index ? { ...proj, loaded: true } : proj
+      )
+    );
+  };
 
   const handleSortChange = (e) => {
     setSortOption(e.target.value);
@@ -71,7 +84,17 @@ const ProjectCards = () => {
       </div>
       <div className="mb-24 mx-auto w-4/5 flex gap-12 flex-wrap justify-center">
         {loadedProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <div
+            key={index}
+            className={`opacity-0 transition-opacity duration-500 delay-${
+              index * 200
+            }ms ${project.loaded ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <ProjectCard
+              project={project}
+              onImageLoad={() => handleImageLoad(index)}
+            />
+          </div>
         ))}
       </div>
     </>

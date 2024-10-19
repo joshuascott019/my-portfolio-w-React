@@ -27,6 +27,8 @@ const ProjectCards = () => {
   const [sortOption, setSortOption] = useState('date-desc');
   const [projects, setProjects] = useState(initProjects);
   const [loadedProjects, setLoadedProjects] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 12;
 
   useEffect(() => {
     const loadImages = async (sortedProjects) => {
@@ -61,6 +63,30 @@ const ProjectCards = () => {
 
   const handleSortChange = (e) => {
     setSortOption(e.target.value);
+    setCurrentPage(1); // Reset to first page when sorting changes
+  };
+
+  // Pagination logic
+  const totalProjects = loadedProjects.length;
+  const totalPages = Math.ceil(totalProjects / projectsPerPage);
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const currentProjects = loadedProjects.slice(
+    startIndex,
+    startIndex + projectsPerPage
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+      window.scrollTo(0, 0); // Scroll to top directly
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+      window.scrollTo(0, 0); // Scroll to top directly
+    }
   };
 
   return (
@@ -83,19 +109,48 @@ const ProjectCards = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-24 mx-auto w-11/12 xl:w-4/5 min-h-screen">
-        {loadedProjects.map((project, index) => (
+        {currentProjects.map((project, index) => (
           <div
-            key={index}
+            key={project.id} // Use a unique identifier instead of index
             className={`opacity-0 transition-opacity duration-500 delay-${
               index * 200
             }ms ${project.loaded ? 'opacity-100' : 'opacity-0'}`}
           >
             <ProjectCard
               project={project}
-              onImageLoad={() => handleImageLoad(index)}
+              onImageLoad={() => handleImageLoad(startIndex + index)}
             />
           </div>
         ))}
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="flex justify-center mb-10">
+        <button
+          onClick={handlePreviousPage}
+          disabled={currentPage === 1}
+          className={`px-4 py-2 ${
+            currentPage === 1
+              ? 'opacity-50 bg-blue-500 cursor-not-allowed'
+              : 'bg-blue-500 text-white'
+          } rounded`}
+        >
+          Previous
+        </button>
+        <span className="mx-4">
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+          className={`px-4 py-2 ${
+            currentPage === totalPages
+              ? 'opacity-50 cursor-not-allowed'
+              : 'bg-blue-500 text-white'
+          } rounded`}
+        >
+          Next
+        </button>
       </div>
     </>
   );

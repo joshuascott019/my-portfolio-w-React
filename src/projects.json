@@ -638,5 +638,15 @@
     "projectLink": "https://joshstictactoegame.netlify.app/",
     "repoLink": "https://github.com/joshuascott019/course-project_react-tic-tac-toe-game",
     "image": "TicTacToeGame.png"
+  },
+  {
+    "id": "65",
+    "title": "Dashboard App",
+    "date": "2024-11-11",
+    "techs": ["React", "Tailwind"],
+    "category": "App",
+    "projectLink": "https://joshsdashboadapp.netlify.app/",
+    "repoLink": "https://github.com/joshuascott019/my-dashboard",
+    "image": "Dashboard App.png"
   }
 ]

@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/no-unescaped-entities */
 import {
   FaHtml5,
   FaCss3Alt,
@@ -14,18 +14,19 @@ const About = () => {
     <div className="flex flex-col gap-8 lg:flex-row justify-between mx-auto my-16 w-4/5 text-lg md:text-xl md:p-4">
       <div className="md:p-4 mx-5 lg:w-1/2">
         <h1 className="font-Montserrat text-4xl mb-10">About</h1>
-        <p className="w-full my-5 text-blue-300">Hello there,</p>
+        <p className="w-full my-5 text-blue-300">Hello there!</p>
         <div className="flex flex-col lg:flex-row text-blue-300">
           <p className="font-Montserrat lg:w-1/2 my-3 lg:mr-3">
-            I'm Joshua, a Frontend Developer with a passion for learning and
-            creating. I love transforming ideas into functional, interactive
-            interfaces. While I’m focusing on frontend technologies, I'm also
-            working towards becoming a Fullstack Developer.
+            I'm Joshua, a Frontend Developer with a passion for crafting
+            interactive and functional user interfaces. I've been on this
+            exciting career journey since January 2023, and I’m currently diving
+            into backend development to achieve my goal of becoming a Fullstack
+            Developer.
           </p>
           <p className="font-Montserrat lg:w-1/2 my-3 lg:ml-3">
-            This portfolio showcases my ongoing journey—from beginner projects
-            to more complex applications. Stay tuned for future updates as I
-            continue to grow and add new creations!
+            This portfolio reflects my growth—from my earliest projects to more
+            sophisticated applications. Keep an eye out for updates as I
+            continue learning, building, and expanding my expertise!
           </p>
         </div>
       </div>

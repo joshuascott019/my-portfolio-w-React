@@ -19,8 +19,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-w-lg flex items-center justify-center py-10 px-5">
-      <div className="bg-slate-800 rounded-lg p-8 max-w-xl w-full">
+    <div className="min-h-screen flex items-center justify-center py-10 px-5">
+      <div className="bg-slate-800 rounded-lg p-8 max-w-4xl w-full absolute top-1/3">
         <h1 className="text-2xl font-bold text-slate-100 mb-4 text-center">
           Contact Us
         </h1>

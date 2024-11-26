@@ -1,111 +1,94 @@
 import { useState } from 'react';
 
-function ContactForm() {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('loading');
-
-    try {
-      const response = await fetch('https://your-backend-url.com/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      setStatus('error');
-    }
+    // Handle form submission logic here
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <div className="max-w-md mx-auto bg-slate-500 p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="name">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="email">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="message">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows="4"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-        >
-          Send Message
-        </button>
-        {status === 'loading' && (
-          <p className="text-center text-sm">Sending...</p>
-        )}
-        {status === 'success' && (
-          <p className="text-center text-sm text-green-500">Message sent!</p>
-        )}
-        {status === 'error' && (
-          <p className="text-center text-sm text-red-500">
-            Something went wrong, try again.
-          </p>
-        )}
-      </form>
+    <div className="min-w-lg flex items-center justify-center py-10 px-5">
+      <div className="bg-slate-800 rounded-lg p-8 max-w-xl w-full">
+        <h1 className="text-2xl font-bold text-slate-100 mb-4 text-center">
+          Contact Me
+        </h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-slate-100"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your name"
+              className="px-1 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              required
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-slate-100"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your email"
+              className="px-1 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              required
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-slate-100"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Write your message here..."
+              className="px-1 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="w-full py-2 px-4 bg-slate-600 text-white font-medium rounded-md hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
   );
-}
+};
 
 export default ContactForm;

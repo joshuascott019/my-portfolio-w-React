@@ -22,7 +22,7 @@ const ContactForm = () => {
     <div className="min-w-lg flex items-center justify-center py-10 px-5">
       <div className="bg-slate-800 rounded-lg p-8 max-w-xl w-full">
         <h1 className="text-2xl font-bold text-slate-100 mb-4 text-center">
-          Contact Me
+          Contact Us
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

@@ -18,20 +18,18 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Set up the parameters for your email
     const emailParams = {
       user_name: formData.name,
       user_email: formData.email,
       message: formData.message,
     };
 
-    // Send the email using EmailJS
     emailjs
       .send(
-        'service_u81137d', // Your Service ID
-        'template_94fi3ih', // Your Template ID
+        'service_u81137d', // Service ID
+        'template_94fi3ih', // Template ID
         emailParams,
-        'Bi1ErfwepMpCqKlkI' // Your Public Key
+        'Bi1ErfwepMpCqKlkI' // Public Key
       )
       .then(
         (response) => {

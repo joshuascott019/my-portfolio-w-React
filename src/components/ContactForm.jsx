@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -16,16 +17,39 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setIsSubmitting(false);
-    }, 2000);
+
+    // Set up the parameters for your email
+    const emailParams = {
+      user_name: formData.name,
+      user_email: formData.email,
+      message: formData.message,
+    };
+
+    // Send the email using EmailJS
+    emailjs
+      .send(
+        'service_u81137d', // Your Service ID
+        'template_94fi3ih', // Your Template ID
+        emailParams,
+        'Bi1ErfwepMpCqKlkI' // Your Public Key
+      )
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Your message has been sent successfully!');
+          setFormData({ name: '', email: '', message: '' }); // Reset form
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert('There was an issue sending your message. Please try again.');
+        }
+      )
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center py-10 px-5">
-      <div className="bg-slate-800 rounded-lg p-8 max-w-4xl w-full absolute top-1/3">
+      <div className="bg-slate-800 rounded-lg p-8 max-w-4xl w-full">
         <h1 className="text-2xl font-bold text-slate-100 mb-4 text-center">
           Contact Us
         </h1>
@@ -44,7 +68,7 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your name"
-              className="px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              className="text-slate-900 px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
               required
             />
           </div>
@@ -62,7 +86,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Your email"
-              className="px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              className="text-slate-900 px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
               required
             />
           </div>
@@ -79,7 +103,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Write your message here..."
-              className="px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              className="text-slate-900 px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
               rows="4"
               required
             ></textarea>
@@ -93,7 +117,7 @@ const ContactForm = () => {
                 : 'bg-slate-600 hover:bg-slate-500'
             } text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2`}
           >
-            Send Message
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>

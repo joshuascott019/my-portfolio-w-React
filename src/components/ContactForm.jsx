@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,8 +15,12 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    // Simulate API call
+    setTimeout(() => {
+      console.log('Form submitted:', formData);
+      setIsSubmitting(false);
+    }, 2000);
   };
 
   return (
@@ -39,7 +44,7 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your name"
-              className="px-1 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              className="px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
               required
             />
           </div>
@@ -57,7 +62,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Your email"
-              className="px-1 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              className="px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
               required
             />
           </div>
@@ -74,14 +79,19 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Write your message here..."
-              className="px-1 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
+              className="px-3 py-2 mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:ring-slate-500 focus:border-slate-500 bg-slate-50"
               rows="4"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-slate-600 text-white font-medium rounded-md hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+            disabled={isSubmitting}
+            className={`w-full py-2 px-4 ${
+              isSubmitting
+                ? 'bg-slate-400 cursor-not-allowed'
+                : 'bg-slate-600 hover:bg-slate-500'
+            } text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2`}
           >
             Send Message
           </button>

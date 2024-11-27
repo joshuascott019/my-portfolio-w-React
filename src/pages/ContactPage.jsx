@@ -1,9 +1,9 @@
-import ContactForm from '../components/ContactForm';
+import GoogleForm from '../components/GoogleForm';
 
 const ContactPage = () => {
   return (
     <>
-      <ContactForm />
+      <GoogleForm />
     </>
   );
 };

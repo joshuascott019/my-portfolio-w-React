@@ -87,7 +87,7 @@ const About = () => {
             <IoLogoJavascript className="text-yellow-400 hover:scale-110 transition-transform duration-300 text-6xl" />
             <p className="text-xs text-center">
               JavaScript <br />
-              <YearSpan startDate="2023-08-01" />
+              <YearSpan startDate="2023-07-01" />
             </p>
           </span>
           <span

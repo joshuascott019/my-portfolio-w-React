@@ -171,7 +171,7 @@ const About = () => {
             <FaNode className="text-green-700 hover:scale-110 transition-transform duration-300 text-6xl" />
             <p className="text-xs text-center">
               Node.js <br />
-              <YearSpan startDate="2023-11-15" />
+              <YearSpan startDate="2024-11-15" />
             </p>
           </span>
           <span
@@ -187,7 +187,7 @@ const About = () => {
             <SiExpress className="text-white hover:scale-110 transition-transform duration-300 text-6xl" />
             <p className="text-xs text-center">
               Express.js <br />
-              <YearSpan startDate="2023-11-15" />
+              <YearSpan startDate="2024-11-15" />
             </p>
           </span>
         </div>

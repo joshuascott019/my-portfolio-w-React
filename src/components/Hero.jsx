@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import HeroImage from '../assets/images/HeroBanner.png';
 
 const Hero = () => {

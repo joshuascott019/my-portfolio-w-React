@@ -5,7 +5,6 @@ const YearSpan = ({ startDate }) => {
     const startDate = new Date(start);
     const now = new Date();
 
-    // Total difference in months
     const totalMonths =
       (now.getFullYear() - startDate.getFullYear()) * 12 +
       (now.getMonth() - startDate.getMonth());

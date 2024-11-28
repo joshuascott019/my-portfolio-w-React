@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { RiTailwindCssFill } from 'react-icons/ri';
@@ -32,10 +32,10 @@ const ProjectCard = ({ project, onImageLoad }) => {
 
       {image && (
         <img
-          className="object-cover w-full h-48" // Ensuring all images have the same height and width
+          className="object-cover w-full h-48"
           src={image}
           alt={title}
-          onLoad={onImageLoad} // Trigger onLoad callback
+          onLoad={onImageLoad}
         />
       )}
 

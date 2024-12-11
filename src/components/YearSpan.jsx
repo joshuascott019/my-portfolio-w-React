@@ -12,6 +12,8 @@ const YearSpan = ({ startDate }) => {
     if (Math.round((totalMonths / 12) * 10) / 10 < 1) {
       if (totalMonths <= 0) {
         return;
+      } else if (totalMonths === 1) {
+        return `(${totalMonths} month)`;
       } else {
         return `(${totalMonths} months)`;
       }

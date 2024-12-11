@@ -44,7 +44,7 @@ const ProjectCard = ({ project, onImageLoad }) => {
           {title}
         </h1>
         <span
-          className="text-black text-2xl"
+          className="text-gray-950 text-2xl"
           onClick={() =>
             window.open(`${repoLink}`, '_blank', 'noopener,noreferrer')
           }

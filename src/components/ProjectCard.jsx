@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaReact, FaGithub } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
@@ -13,11 +13,12 @@ const techIcons = {
 };
 
 const ProjectCard = ({ project, onImageLoad }) => {
-  const { techs, projectLink, image, title, category } = project;
+  const { techs, projectLink, image, title, category, repoLink } = project;
   const cardStyle =
     projectLink === ''
       ? 'relative flex flex-col justify-between border-black border-opacity-50 border-8 text-center bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-red-600 hover:border-red-600 transition-all duration-300 hover:animate-shake'
       : 'relative flex flex-col justify-between border-transparent border-8 text-center bg-blue-100 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-blue-600 hover:border-blue-600 transition-all duration-300 transform hover:scale-110';
+  console.log(repoLink);
 
   return (
     <Link
@@ -38,10 +39,20 @@ const ProjectCard = ({ project, onImageLoad }) => {
           onLoad={onImageLoad}
         />
       )}
-
-      <h1 className="font-Montserrat text-lg sm:text-xl tracking-tight text-black p-2">
-        {title}
-      </h1>
+      <div className="flex items-center justify-center">
+        <h1 className="font-Montserrat text-lg sm:text-xl tracking-tight text-black p-2">
+          {title}
+        </h1>
+        <span
+          className="text-black text-2xl"
+          onClick={() =>
+            window.open(`${repoLink}`, '_blank', 'noopener,noreferrer')
+          }
+          title="Repo Link"
+        >
+          <FaGithub />
+        </span>
+      </div>
       <p className="text-black text-xs sm:text-sm">{category}</p>
       {projectLink === '' && (
         <p className="text-xs text-red-700 font-bold z-10">

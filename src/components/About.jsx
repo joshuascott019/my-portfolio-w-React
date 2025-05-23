@@ -10,6 +10,7 @@ import {
 import { IoLogoJavascript } from 'react-icons/io5';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { SiExpress } from 'react-icons/si';
+import { BiLogoPostgresql } from 'react-icons/bi';
 import YearSpan from './YearSpan';
 
 // Years Calc
@@ -187,6 +188,22 @@ const About = () => {
             <SiExpress className="text-white hover:scale-110 transition-transform duration-300 text-6xl" />
             <p className="text-xs text-center">
               Express.js <br />
+              {/* <YearSpan startDate="2024-11-15" /> */}
+            </p>
+          </span>
+          <span
+            className="flex flex-col items-center animate-pulse cursor-pointer"
+            onClick={() =>
+              window.open(
+                'https://www.postgresql.org/',
+                '_blank',
+                'noopener,noreferrer'
+              )
+            }
+          >
+            <BiLogoPostgresql className="text-[#336791] hover:scale-110 transition-transform duration-300 text-6xl" />
+            <p className="text-xs text-center">
+              PostgreSQL <br />
               {/* <YearSpan startDate="2024-11-15" /> */}
             </p>
           </span>
